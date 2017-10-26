@@ -13,5 +13,5 @@ Single-Shot-Run:
     -e "AZURE_STORAGE_ACCOUNT=<storage account name>" \
     -e "AZURE_STORAGE_KEY=<storage account key>" \
     -e "CRON_TIME=<'0 0 * * *' midnight default>" \
-    holobuilder/mongodump-azure
+    whispers16/docker-mongodump-azure
 ```
