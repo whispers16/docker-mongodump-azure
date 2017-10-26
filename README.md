@@ -1,5 +1,5 @@
 # docker-mongodump-azure
-A Docker image performing backups via mongodump into an Azure Storage Account.
+A Docker image performing backups via mongodump into an Azure Storage Account and cron scheduler.
 
 # Usage
 Single-Shot-Run:
@@ -12,10 +12,6 @@ Single-Shot-Run:
     -e "AZURE_CONTAINER=<storage container name>" \
     -e "AZURE_STORAGE_ACCOUNT=<storage account name>" \
     -e "AZURE_STORAGE_KEY=<storage account key>" \
+    -e "CRON_TIME=<'0 0 * * *' midnight default>" \
     holobuilder/mongodump-azure
-```
-
-Scheduling using cron:
-```
-  echo "0 3 * * * <docker user> docker start mongodb-azure-backup" > /etc/crontab
 ```
